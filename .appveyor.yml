@@ -1,0 +1,17 @@
+image: Ubuntu2004
+stack: node 18
+
+branches:
+  only:
+    - main
+
+cache: node_modules
+
+install:
+  - npm install
+
+build: off
+
+test_script:
+  - npx eslint .
+  - npm test
